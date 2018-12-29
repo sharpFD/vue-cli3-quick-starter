@@ -116,7 +116,7 @@
 - **分模块VUEX引入**
   - `src/store`目录下存放着vuex相关文件，可在mixin中统一引入后，在需要的组件中混入。
   
-- **ErrorPage、分环境配置文件、常见目录别名**
+- **ErrorPage、分环境配置文件、常见目录别名、iconfont**
   - `src/views/error`目录下存放常见404，403，500页面。
   - `.env.local`、`.env.alpha`、`.env.prod` 区分不同环境，自动注入axios的baseurl
   - 在`vue.config.js`文件中配置了不同目录的别名：
