@@ -22,11 +22,17 @@
                 <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
             </el-checkbox-group>
         </div>
-        <h1>{{userName}}</h1>
-        <h1>{{chartName}}</h1>
+        <el-autocomplete
+                v-model="keyword"
+                :fetch-suggestions="querySearchAsync"
+                placeholder="请输入内容"
+                @select="handleSelect"
+        ></el-autocomplete>
     </div>
 </template>
 <script>
+    import mixins from '../config/mixins'
+
     const cityOptions = ['上海', '北京', '广州', '深圳'];
     export default {
         data() {
@@ -36,17 +42,18 @@
                 checkboxGroup3: ['上海'],
                 checkboxGroup4: ['上海'],
                 cities: cityOptions,
-                userName: '',
-                chartName: ''
+                keyword: ''
             };
         },
-        mounted(){
-            this.$api.getUserName().then(res=>{
-                this.userName = res.data
-            })
-            this.$api.getChartName().then(res=>{
-                this.chartName = res.data
-            })
-        }
+        mounted() {
+        },
+        methods: {
+            querySearchAsync(queryString, cb) {
+                this.$api.getProducts(queryString).then(res => {
+                    cb(res.result);
+                })
+            },
+        },
+        mixins: [mixins]
     }
 </script>

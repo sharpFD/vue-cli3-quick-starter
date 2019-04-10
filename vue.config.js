@@ -9,10 +9,10 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: process.env.VUE_APP_PROXY_URL, // http://10.16.181.221:3000
+                target: process.env.VUE_APP_PROXY_URL,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/mock/103/test/'
+                    '/api/': ''
                 }
             },
         }

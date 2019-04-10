@@ -40,7 +40,7 @@
     │  │      info.js
     │  │      
     │  ├─chart       // 模块二接口
-    │  │      chart.js
+    │  │      example.js
     │  │      
     │  └─info        // 模块三接口
     │          info.js

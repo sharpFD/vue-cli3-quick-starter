@@ -65,7 +65,6 @@ function filterAsyncRouter(asyncRouterMap, pages) {
 // register global progress.
 const whiteList = ["/","/401", "/404", "/500"]; // 不重定向白名单
 router.beforeEach((to, from, next) => {
-    debugger
     NProgress.start(); // 开启Progress
     if (whiteList.indexOf(to.path) !== -1) {
         // 在免登录白名单，直接进入
@@ -74,6 +73,7 @@ router.beforeEach((to, from, next) => {
     }
 
     let adminId = getAdminId();
+    console.log('adminId ===>' ,adminId)
     if (adminId !== "undefined" && adminId !== "" && adminId) {
         // 判断是否有token
         if (to.path === "/demo-page"){

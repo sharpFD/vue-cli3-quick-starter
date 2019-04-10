@@ -7,7 +7,7 @@ import {Message} from "element-ui";
 // initial state
 const state = {
     adminId: getAdminId(), // id
-    userName: "", // 昵称
+    userName: "wuyungen", // 昵称
     token: getToken(), // 登录token
     pages: [], // 页面权限列表
     roles: [], // 角色权限列表
@@ -20,6 +20,7 @@ const getters = {
     userName: state => state.userName,
     token: state => state.token,
     pages: state => state.pages,
+    roles: state => state.roles,
     routers: state => state.routers
 };
 
@@ -92,6 +93,7 @@ const mutations = {
 };
 
 export default {
+    namespaced: true,
     state,
     getters,
     actions,
