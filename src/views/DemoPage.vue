@@ -22,12 +22,6 @@
                 <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
             </el-checkbox-group>
         </div>
-        <el-autocomplete
-                v-model="keyword"
-                :fetch-suggestions="querySearchAsync"
-                placeholder="请输入内容"
-                @select="handleSelect"
-        ></el-autocomplete>
     </div>
 </template>
 <script>
@@ -46,14 +40,13 @@
             };
         },
         mounted() {
+            this.$api.getMockData().then(res => {
+                this.$message.success(res.data)
+            }).catch(err => {
+                this.$message.error(err.msg)
+            })
         },
-        methods: {
-            querySearchAsync(queryString, cb) {
-                this.$api.getProducts(queryString).then(res => {
-                    cb(res.result);
-                })
-            },
-        },
+        methods: {},
         mixins: [mixins]
     }
 </script>

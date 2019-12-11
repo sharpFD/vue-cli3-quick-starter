@@ -1,0 +1,16 @@
+$--color-primary: #57912B;
+$--font-size-base: 14px;
+
+$--font-path: '../../node_modules/element-ui/lib/theme-chalk/fonts';
+@import "../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+@mixin theme($backColor,$fColor) {
+  $--color-primary: $fColor;
+  background-color: $backColor;
+  transition: background-color .5s;
+  color: $fColor !important;
+}
+
+@function changeElementTheme($color,$--color-primary) {
+  $--color-primary: $color
+}

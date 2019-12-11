@@ -1,4 +1,4 @@
-# vuejs-cli3-quick-starter
+# vue-cli3-quick-starter
 
 > 基于vue-cli3创建的项目快速启动摸板，参考目前项目主流结构，快速开发企业级前端项目。
 
@@ -154,8 +154,6 @@ npm run build
 
 ## Partners
 >
-<a href="https://yapi.ymfe.org/"><img src="https://yapi.ymfe.org/documents/images/logo_header@2x.png" width="40" height="40"/></a>
-<br/>
 <br/>
 <a href="https://jenkins.io/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jenkins_logo_with_title.svg/375px-Jenkins_logo_with_title.svg.png" width="130" height="40"/></a>
 

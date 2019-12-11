@@ -9,7 +9,7 @@ import * as filters from "./filtres/index"; // 全局过滤器
 import api from './config/install'
 import "./assets/iconfont/iconfont.css";
 import './styles/base.scss'
-import './styles/theme.scss'
+import './styles/color.scss'
 //import './role'
 
 Vue.use(ElementUI)
