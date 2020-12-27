@@ -164,8 +164,3 @@ npm run build
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/content/LICENSE) 
 
 Copyright (c) 2018-2019 [wuyungen1996](https://github.com/wuyungen1996)
-
-# Based
-
-> The project is based on [vue-admin-html](https://github.com/lmxdawn/vue-admin-html)  
-Author:[@lmxdawn](https://github.com/lmxdawn)
